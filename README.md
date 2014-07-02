@@ -21,7 +21,7 @@ If everything went well there is a new container called "logger" running the com
     docker ps
 
 ## Where are the logs?
-Containers are not virtual machines so we can't just easily SSH into the environment, **BUT** there are other ways. In the Dockerfile you see a *VOLUMES* instruction that points to */var/log* (obviously, where our logs reside).
+Containers are not virtual machines so we can't just easily SSH into the environment, **BUT** there are other ways. In the Dockerfile you see a *VOLUME* instruction that points to */var/log* (obviously, where our logs reside).
 
     docker inspect -f {{.Volumes}} logger # See where that volume is mapped in the file system
 
